@@ -1,0 +1,319 @@
+/* Geral */
+body {
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+    margin: auto;
+    max-width: 80%;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ababa6;
+    color: black;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+header {
+    background-color: #444;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+footer img {
+    width: 100;
+    height: 100;
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+th {
+    color: white;
+}
+
+footer a {
+    margin: 20px;
+}
+
+.container {
+    padding: 0px 50px;
+}
+
+nav a:hover {
+    color: #008000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #008000;
+}
+
+ul {
+    margin: 20px;
+    padding-left: 40px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Página Doações */
+body doaçoes.html {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Cabeça */
+header {
+    background: #444;
+    color: white;
+    padding: 10px 20px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+
+.introducao {
+    text-align: center;
+    margin: 20px 10%;
+}
+
+.imagem-principal {
+    width: 50%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.texto-importancia {
+    font-size: 1.2rem;
+    margin: 0 auto;
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+/* Formulário */
+.formulario-doacao {
+    background: #333;
+    margin: 30px 10%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-doacao h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #008000;
+}
+
+.form-grupo {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.form-grupo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-grupo input {
+    width: 100%;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 1rem;
+}
+
+.btn-doar {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #008000;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-doar:hover {
+    background-color: #005500;
+}
+
+/* Formas de pagamento */
+.formas-pagamento {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.formas-pagamento h3 {
+    font-size: 1.5rem;
+    color: #008000;
+    margin-bottom: 15px;
+}
+
+.formas-pagamento ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.formas-pagamento li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 120px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.formas-pagamento li img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.formas-pagamento li p {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+    body {
+        margin: 0;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    main {
+        padding: 20px 0%;
+    }
+
+    .imagem-principal {
+        width: 80%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .texto-importancia {
+        font-size: 1rem;
+    }
+
+    .formulario-doacao {
+        margin: 20px 0%;
+        padding: 15px 10px;
+        max-width: 100%;
+    }
+
+    .formas-pagamento ul {
+        gap: 10px;
+    }
+
+    .formas-pagamento li {
+        max-width: 100px;
+        padding: 8px;
+    }
+
+    .formas-pagamento li img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .formas-pagamento li p {
+        font-size: 0.8rem;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
