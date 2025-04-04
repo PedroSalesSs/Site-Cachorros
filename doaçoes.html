@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Faça doações para ajudar os cachorros">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/doações.css">
+    <link rel="icon" href="./img/icone topo.jpg" type="image">
+    <title>Doações</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Cabeça do site -->
+        <header>
+            <nav class="navbar">
+                <ul class="menu">
+                    <li>
+                        <a href="raças.html">Raças</a>
+                    </li>
+                    <li>
+                        <a href="index.html">Início</a>
+                    </li>
+                    <li>
+                        <a href="media.html">Media</a>
+                    </li>
+                    <li>
+                        <a href="doaçoes.html">Doações</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Bem-vindo ao site de ajuda aos animais</h1>
+
+            <!-- Doação -->
+            <section class="introducao">
+                <h1>Faça uma Doação</h1>
+                <p>Milhares de animais estão em situação de abandono ou enfrentando dificuldades extremas.
+                    Sua doação pode ajudar a oferecer alimento, cuidados médicos e abrigo para esses seres
+                    que precisam de nossa atenção e amor. Juntos, podemos transformar vidas e dar a eles
+                    uma nova chance de felicidade.</p>
+
+                <div class="contato-doacao">
+                    <p><strong>Telefone para doações:</strong></p>
+                    <p style="font-size: 1.2em; color: black;">(99) 99999-9999</p>
+                </div>
+
+                <p>Obrigado por fazer parte dessa causa!</p>
+
+                <!-- Formulário -->
+                <section class="formulario-doacao">
+                    <h2>Faça sua doação</h2>
+                    <form action="#" method="post">
+                        <div class="form-grupo">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-grupo">
+                            <label for="telefone">Telefone:</label>
+                            <input type="tel" id="telefone" name="telefone" required maxlength="15"
+                                onkeyup="handlePhone(event)">
+                        </div>
+
+                        <div class="form-grupo">
+                            <label for="valor">Valor da Doação (R$):</label>
+                            <input type="number" id="valor" name="valor" step="0.01" required>
+                        </div>
+
+                        <div class="form-grupo">
+                            <button type="submit" class="btn-doar">Doar Agora</button>
+                        </div>
+                    </form>
+
+                    <!-- Formas de pagamento -->
+                    <div class="formas-pagamento">
+                        <h3>Formas de Pagamento:</h3>
+                        <ul>
+                            <li>
+                                <img src="./img/icons8-credit-card-64.png" alt="Cartão de Crédito">
+                                <p>Cartão</p>
+                            </li>
+                            <li>
+                                <img src="./img/icons8-foto.svg" alt="Pix">
+                                <p>Pix</p>
+                            </li>
+                            <li>
+                                <img src="./img/icons8-boleto-64.png" alt="Boleto Bancário">
+                                <p>Boleto</p>
+                            </li>
+                            <li>
+                                <img src="./img/icons8-bitcoin.svg" alt="Bitcoin">
+                                <p>Bitcoin</p>
+                            </li>
+                            <li>
+                                <img src="./img/icons8-barter-50.png" alt="Escambo">
+                                <p>Escambo</p>
+                            </li>
+                            <li>
+                                <img src="./img/icons8-barras-de-ouro-48.png" alt="Ouro">
+                                <p>Ouro</p>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <!-- Rodapé -->
+        <footer>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <img src="./img/icons8-instagram-logo-48.svg"></img>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                <img src="./img/icons8-x-50.svg"></img>
+            </a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                <img src="./img/icons8-facebook.svg"></img>
+            </a>
+        </footer>
+    </div>
+
+    <footer>
+        <p>Desenvolvido por Amantes de Cachorros. <a href="https://pt.wikipedia.org">Saiba mais.</a></p>
+    </footer>
+
+</body>
+
+
+<script>
+    document.querySelector("form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert("Obrigado por sua doação! Sua ajuda é muito importante.");
+    });
+    const handlePhone = (event) => {
+        let input = event.target
+        input.value = phoneMask(input.value)
+    }
+
+    const phoneMask = (value) => {
+        if (!value) return ""
+        value = value.replace(/\D/g, '')
+        value = value.replace(/(\d{2})(\d)/, "($1) $2")
+        value = value.replace(/(\d)(\d{4})$/, "$1-$2")
+        return value
+    }
+</script>
+</body>
+
+</html>
